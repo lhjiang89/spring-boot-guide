@@ -4,6 +4,7 @@
 package hello.jpa;
 
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +30,12 @@ public class JPAConfigTest {
 	private T1Repository t1Repository;
 	@Autowired
 	private T2Repository t2Repository;
+
+	@Before
+	public void setUp() {
+		t1Repository.deleteAll();
+		t2Repository.deleteAll();
+	}
 
 	@Test
 	public void test() throws Exception {

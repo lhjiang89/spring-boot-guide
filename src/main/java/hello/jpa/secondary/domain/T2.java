@@ -5,7 +5,6 @@ package hello.jpa.secondary.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 /**
@@ -18,7 +17,7 @@ import javax.persistence.Id;
 public class T2 {
 
 	@Id
-	@GeneratedValue
+	// @GeneratedValue
 	private Long id;
 	@Column
 	private String name;

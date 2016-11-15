@@ -4,7 +4,6 @@
 package hello.jpa.primary.domain;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 /**
@@ -17,7 +16,7 @@ import javax.persistence.Id;
 public class T1 {
 
 	@Id
-	@GeneratedValue
+	// @GeneratedValue
 	private Long id;
 
 	public T1() {
