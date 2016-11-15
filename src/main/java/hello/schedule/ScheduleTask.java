@@ -31,9 +31,9 @@ public class ScheduleTask {
 	 *                               ：第一次延迟1秒后执行，之后按fixedRate的规则每5秒执行一次
 	 * @Scheduled(cron="") ：通过cron表达式定义规则
 	 */
-	@Scheduled(fixedRate = 5000)
+	@Scheduled(fixedRate = 10000)
 	public void reportCurrentTime() {
-		System.out.println("现在时间：" + sdf.format(new Date()));
+		System.out.println("Now is: " + sdf.format(new Date()));
 	}
 
 }
