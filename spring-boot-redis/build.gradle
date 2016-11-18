@@ -1,0 +1,14 @@
+jar {
+    baseName = 'spring-boot-mybatis'
+    version =  '0.1.0'
+}
+
+
+dependencies {
+
+    compile 'org.springframework.boot:spring-boot-starter-jdbc'
+    compile 'postgresql:postgresql:9.1-901-1.jdbc4'
+    compile 'org.springframework.boot:spring-boot-starter-data-jpa'
+    testCompile 'org.springframework.boot:spring-boot-starter-test'
+    
+}

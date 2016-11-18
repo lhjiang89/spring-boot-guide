@@ -7,30 +7,30 @@ buildscript {
     }
 }
 
-apply plugin: 'java'
-apply plugin: 'eclipse'
-apply plugin: 'idea'
-apply plugin: 'spring-boot'
+subprojects {
 
-jar {
-    baseName = 'spring-boot-guide'
-    version =  '0.1.0'
-}
+    apply plugin: 'java'
+	apply plugin: 'eclipse'
+	apply plugin: 'spring-boot'
 
-repositories {
-    mavenCentral()
-}
+    repositories {
+       mavenCentral()
+    }
+    
+    
+	sourceCompatibility = 1.8
+	targetCompatibility = 1.8
 
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
+    dependencies {
+     	compile 'org.springframework.boot:spring-boot-starter-thymeleaf'
+		compile 'org.springframework.boot:spring-boot-starter-web'
+   		testCompile 'org.springframework.boot:spring-boot-starter-test'
+    }
 
-dependencies {
-    compile 'org.springframework.boot:spring-boot-starter-thymeleaf'
-    compile 'org.springframework.boot:spring-boot-starter-web'
-    compile 'org.springframework.boot:spring-boot-starter-jdbc'
-    compile 'postgresql:postgresql:9.1-901-1.jdbc4'
-    compile 'org.springframework.boot:spring-boot-starter-data-jpa'
-    compile 'org.springframework.boot:spring-boot-starter-redis'
-    compile 'org.springframework.boot:spring-boot-starter-aop'
-    testCompile 'org.springframework.boot:spring-boot-starter-test'
+    version = '1.0'
+
+    jar {
+	    baseName = 'spring-boot-guide'
+	    version =  '0.1.0'
+	}
 }

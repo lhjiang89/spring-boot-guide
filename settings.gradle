@@ -1,0 +1,2 @@
+
+include "spring-boot-ehcache", "spring-boot-redis", "spring-boot-mybatis", "spring-boot-general"
